@@ -13,9 +13,9 @@
       Feels like: {{ actualWeatherData.main.feels_like | kelvinToCelsius }} °C <br>
       Pressure: {{ actualWeatherData.main.pressure }} hPa <br>
       Humidity: {{ actualWeatherData.main.humidity }} % <br>
-      Wind: {{ actualWeatherData.wind.speed }}
+      Wind: {{ actualWeatherData.wind.speed }} m/s
+      <hr>
     </div>
-    <hr>
     <div>
       <button mat-raised-button color="primary" [routerLink]="['/', 'select-city']">Select next city</button>
     </div>
