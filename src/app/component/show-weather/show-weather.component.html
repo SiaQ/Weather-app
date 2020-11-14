@@ -1,0 +1,25 @@
+<div class="d-flex flex-column h-100">
+
+  <div>
+    <app-toolbar></app-toolbar>
+  </div>
+
+  <div class="d-flex flex-grow-1 justify-content-center align-items-center flex-column">
+
+    <div>
+      {{ actualWeatherData.name }} <br>
+      <hr>
+      Temp: {{ actualWeatherData.main.temp | kelvinToCelsius }} °C <br>
+      Feels like: {{ actualWeatherData.main.feels_like | kelvinToCelsius }} °C <br>
+      Pressure: {{ actualWeatherData.main.pressure }} hPa <br>
+      Humidity: {{ actualWeatherData.main.humidity }} % <br>
+      Wind: {{ actualWeatherData.wind.speed }}
+    </div>
+    <hr>
+    <div>
+      <button mat-raised-button color="primary" [routerLink]="['/', 'select-city']">Select next city</button>
+    </div>
+
+  </div>
+
+</div>
