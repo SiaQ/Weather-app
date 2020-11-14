@@ -38,10 +38,11 @@ export class SelectCityComponent implements OnInit {
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);
+      alert('No such city, try again');
     } else {
       console.log(error.error.cod, error.error.message);
+      alert(error.message);
     }
-    alert('No such city, try again');
     return throwError(
       'Something bad happened; please try again later.');
   }
