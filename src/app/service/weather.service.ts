@@ -13,6 +13,6 @@ export class WeatherService {
     const params = new HttpParams()
       .set('q', cityName)
       .set('appid', '79dfba82d265341aed048c40c894cb0e');
-    return this.http.get('http://api.openweathermap.org/data/2.5/weather', {params});
+    return this.http.get('https://api.copenweathermap.org/data/2.5/weather', {params});
   }
 }
